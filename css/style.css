@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Varela Round", sans-serif;
+}
+
+
+
+/*!--HEADER--*/
+
+.header {
+    background-color: #fff;  /* Fondo blanco */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra suave debajo del header */
+}
+
+.header img {
+    height: 100px; /* Tamaño del logo */
+    width: auto;
+}
+
+/* Estilo para el nav y su lista */
+nav {
+    flex-grow: 1;
+    text-align: right;  /* Alinea los elementos a la derecha */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+/* Estilos para cada enlace */
+nav a {
+    text-decoration: none;
+    color: #333;  /* Color de texto por defecto */
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;  /* Bordes redondeados para cada enlace */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Transición para efectos */
+}
+
+/* Efectos al pasar el mouse por encima del enlace */
+nav a:hover {
+    transform: scale(1.1);  /* Aumenta ligeramente el tamaño */
+    background-color: #000;  /* Fondo negro */
+    color: #fff;  /* Texto blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra más marcada */
+}
+
+/* Opcional: Hacer que los elementos del nav se vean bien en pantallas más pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .header {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*--MAIN--*/
+
+/* Estilos para la sección Hero */
+.hero {
+    height: calc(100vh - 50px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: url("../img/cielo1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+.hero a.btn-2 {
+    background-color: #000;  /* Fondo negro */
+    color: #fff;  /* Texto blanco */
+    text-decoration: none;  /* Elimina subrayado */
+    padding: 12px 40px;  /* Espaciado interno */
+    border: 2px solid #fff;  /* Borde blanco */
+    border-radius: 25px;  /* Bordes redondeados */
+    font-size: 16px;  /* Tamaño de la fuente */
+    font-weight: bold;  /* Texto en negrita */
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;  /* Transición suave */
+}
+
+.hero a.btn-2:hover {
+    transform: scale(1.1);  /* Aumenta el tamaño */
+    background-color: #fff;  /* Fondo blanco al pasar el puntero */
+    color: #000;  /* Texto negro */
+    border-color: #000;  /* Borde negro al pasar el puntero */
+}
+
+
+
+
+
+
+
+
+
+
+/*--seccion de imagenes de fuerza--*/
+
+.metodologias h2{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    margin: 0px;
+
+}
+
+
+/* Estilos generales para el contenedor de metodologías */
+.metodologias {
+    margin: 50px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.metodologias h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+/* Contenedor de las metodologías */
+.metodologias-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilo base para cada div dentro de metodologías */
+.metodologias-contenedor div {
+    position: relative;
+    width: 30%;
+    background-color: #f0f0f0;  /* Fondo gris claro */
+    border-radius: 10px;         /* Bordes redondeados */
+    overflow: hidden;            /* Evita que las imágenes se salgan del contorno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición de escala y sombra */
+    cursor: pointer;            /* Indica que se puede interactuar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;          /* Añadido espacio interno */
+}
+
+.metodologias-contenedor div:hover {
+    transform: scale(1.05);      /* Aumenta el tamaño al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Aumenta la sombra */
+}
+
+/* Estilos para las imágenes dentro de los divs */
+.metodologias-contenedor div img {
+    width: 100%;                 /* La imagen ocupa el 100% del ancho del div */
+    height: 200px;               /* Altura fija para mantener el aspecto uniforme */
+    object-fit: cover;           /* La imagen cubre todo el espacio sin distorsionarse */
+    transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Efecto sobre la imagen al pasar el mouse */
+.metodologias-contenedor div:hover img {
+    transform: scale(1.1);       /* Hace que la imagen se amplíe un poco */
+}
+
+/* Ajustes para los div internos dentro de cada metodología */
+.metodologias-contenedor div > div {
+    width: 100%; /* Asegura que el contenedor interno ocupe todo el ancho del div principal */
+    text-align: center; /* Centra el contenido dentro del div */
+    padding: 10px; /* Espaciado interno para no quedar pegado al borde */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+/* Estilos específicos para el h3 */
+.metodologias-contenedor div h3 {
+    font-size: 1.5rem;
+    margin: 10px 0; /* Espaciado uniforme */
+    color: #333;
+    font-weight: 600;
+    text-align: center; /* Mantiene el título centrado */
+}
+
+/* Estilos específicos para el p */
+.metodologias-contenedor div p {
+    font-size: 1rem;
+    color: #666;
+    text-align: justify; /* Justificación del texto */
+    width: 95%; /* El texto ocupa casi todo el ancho del div */
+    margin: 0 auto; /* Centra el párrafo horizontalmente */
+    line-height: 1.5; /* Mejora la legibilidad */
+    padding-top: 10px; /* Espaciado superior */
+}
+
+/* Asegura que las columnas sean responsivas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .metodologias-contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .metodologias-contenedor div {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+
+.fixed{
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+}
+
+
+footer {
+    background-color: rgb(201, 201, 201); /* Mantiene el color de fondo */
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 80px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 1000;
+    color: black; /* Mantiene el color negro */
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    transition: color 0.3s, transform 0.3s, text-shadow 0.3s; /* Transiciones para efectos */
+    text-align: center; /* Centra el texto */
+}
+
+footer h2 a {
+    text-decoration: none; /* Elimina subrayado */
+    color: inherit; /* Hereda el color negro */
+}
+
+footer h2:hover {
+    color: #333; /* Un tono más oscuro al pasar el mouse */
+    transform: scale(1.1); /* Efecto de aumentar el tamaño */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Sombra de texto al pasar el mouse */
+}
+
+footer a img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    transition: transform 0.3s ease; /* Transición para suavizar solo el agrandamiento */
+}
+
+footer a img:hover {
+    transform: scale(1.1); /* Aumento de tamaño al hacer hover */
+}
+
+footer a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer img {
+    max-width: 100%; /* Asegura que las imágenes se ajusten adecuadamente */
+    height: auto;
+}
+
+footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:870px) {
+    header{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:870px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1{
+        font-size: 60px;
+        padding-bottom: 10px;
+    
+    }
+    header nav ul li a{
+        font-size: 20px;
+    }
+    
+    .hero h2 {
+        font-size: 20px;
+        color: black;
+    }
+    .hero a{
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width:580px){
+    footer {
+        flex-direction: column;
+        align-items: center;
+}}
+
+
+@media screen and (max-width:530px){
+    footer h2{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width:530px){
+    .fixed img{
+        width: 40px;
+}}
+
+
+
+/*--PAGES DE COACHES--*/
+/* Estilos para la sección sobre-nosotros */
+.sobre-nosotros {
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    background-image: url('../img/coaches/equipo.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Enfoca la parte superior de la imagen */
+    color: #000000; /* Asegura que el texto sea visible sobre la imagen */
+    height: calc(100vh - 50px);
+    background-attachment: fixed;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el título */
+}
+
+.sobre-nosotros p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para el texto */
+}
+
+/* Imagen de fondo ajustada */
+.sobre-nosotros img {
+    display: none; /* Oculta la imagen si también está como un elemento separado */
+}
+
+/* Estilos para la sección tarjetas-equipo */
+.tarjetas-equipo {
+    padding: 40px;
+    text-align: center;
+}
+
+.tarjetas-equipo h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+/* Estilos para la sección tarjetas-equipo */
+.tarjetas-equipo {
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para las tarjetas */
+    border-radius: 10px;
+}
+
+.tarjetas-equipo h2 {
+    font-size: 2rem;
+    margin-top: 150px;
+    color: #fff; /* Asegura que el título se vea bien sobre el fondo oscuro */
+}
+
+/* Usamos Grid para organizar las tarjetas */
+.tarjetas-equipo .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    margin: 10px;
+}
+
+/* Contenedor de las tarjetas, utilizando grid */
+.tarjetas-equipo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas según el tamaño */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    padding: 0 20px; /* Añade espaciado lateral */
+}
+
+/* Estilo base para cada tarjeta */
+.tarjetas-equipo .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de aumento */
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Efecto de aumento en la tarjeta */
+.tarjetas-equipo .card:hover {
+    transform: scale(1.5); /* Aumento considerable del tamaño */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Aumenta la sombra al hacer hover */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.tarjetas-equipo .card img {
+    width: calc(100% - 10px); /* Reducir el tamaño de la imagen 10px */
+    height: calc(197px - 10px); /* Reducir 10px la altura también */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    object-position: center top; /* Desplaza la imagen hacia abajo para mostrar más cabello */
+    border-radius: 15px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espacio entre la imagen y el texto */
+}
+
+
+/* Estilo para el texto de cada tarjeta */
+.tarjetas-equipo .card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .tarjetas-equipo {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más pequeñas */
+    }
+
+    .tarjetas-equipo .card {
+        padding: 15px; /* Menos padding en pantallas pequeñas */
+    }
+}
+
