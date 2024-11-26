@@ -11,26 +11,25 @@ body{
 
 
 
-/*!--HEADER--*/
-
+/* HEADER */
 .header {
-    background-color: #fff;  /* Fondo blanco */
+    background-color: #fff;  
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra suave debajo del header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
 }
 
 .header img {
-    height: 100px; /* Tamaño del logo */
+    height: 100px; 
     width: auto;
 }
 
 /* Estilo para el nav y su lista */
 nav {
     flex-grow: 1;
-    text-align: right;  /* Alinea los elementos a la derecha */
+    text-align: right;  
 }
 
 nav ul {
@@ -419,7 +418,7 @@ footer > div {
 }
 
 /* Usamos Grid para organizar las tarjetas */
-.tarjetas-equipo .card {
+.tarjetas-equipo .card-coach {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
@@ -436,7 +435,7 @@ footer > div {
 }
 
 /* Estilo base para cada tarjeta */
-.tarjetas-equipo .card {
+.tarjetas-equipo .card-coach {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -447,13 +446,13 @@ footer > div {
 }
 
 /* Efecto de aumento en la tarjeta */
-.tarjetas-equipo .card:hover {
+.tarjetas-equipo .card-coach:hover {
     transform: scale(1.5); /* Aumento considerable del tamaño */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Aumenta la sombra al hacer hover */
 }
 
 /* Estilo para las imágenes dentro de las tarjetas */
-.tarjetas-equipo .card img {
+.tarjetas-equipo .card-coach img {
     width: calc(100% - 10px); /* Reducir el tamaño de la imagen 10px */
     height: calc(197px - 10px); /* Reducir 10px la altura también */
     object-fit: cover; /* Asegura que la imagen no se distorsione */
@@ -464,7 +463,7 @@ footer > div {
 
 
 /* Estilo para el texto de cada tarjeta */
-.tarjetas-equipo .card p {
+.tarjetas-equipo .card-coach p {
     font-size: 1rem;
     color: #333;
     line-height: 1.5;
@@ -476,8 +475,475 @@ footer > div {
         grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más pequeñas */
     }
 
-    .tarjetas-equipo .card {
+    .tarjetas-equipo .card-coach {
         padding: 15px; /* Menos padding en pantallas pequeñas */
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS para page TREK Sportbox */
+
+/* Estilos para la sección Hero */
+
+
+.hero-trek {
+    height: calc(100vh - 50px);
+    text-align: center;
+    color: #000; /* Color del texto */
+    background-image: url("../img/trek/trek-hero-inca-laguna.jpg"); /* Imagen fija */
+    background-position: center center; /* Posición fija para la imagen */
+    background-repeat: no-repeat;
+    background-size: cover; /* Asegura que la imagen cubra el contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espaciado interno */
+}
+
+
+/* Estilos para el título */
+.hero-trek h2 {
+    font-size: 48px; /* Tamaño del texto */
+    margin-bottom: 30px; /* Espaciado inferior */
+    line-height: 1.2; /* Espaciado entre líneas */
+    padding: 10px; /* Espaciado interno */
+}
+
+
+/* Estilos para el párrafo */
+.hero-trek p {
+    color: #ffffff;
+    font-size: 18px; /* Tamaño del texto */
+    margin-top: 10px; /* Espaciado superior */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+
+
+
+/* Estilos para el botón */
+.hero-trek a.btn-2 {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 50px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+/* Efecto hover en el botón */
+.hero-trek a.btn-2:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+
+
+/* Tarjetas del main de TREK */
+/* Estilos para el main */
+main {
+    padding: 60px 20px; /* Separación superior e inferior para diferenciar de la hero y el footer */
+}
+
+/* Estilos para la sección galeria-trek */
+.galeria-trek {
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    border-radius: 10px;
+}
+
+/* Usamos Grid para organizar las tarjetas */
+.galeria-trek {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas fijas */
+    gap: 30px; /* Espaciado entre las tarjetas */
+    padding: 20px; /* Espaciado interior de la galería */
+}
+
+/* Estilo base para cada tarjeta */
+.galeria-trek .card-trek {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de aumento */
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Efecto de aumento en la tarjeta */
+.galeria-trek .card-trek:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.galeria-trek .card-trek img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 300px; /* Altura más grande */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    object-position: center; /* Centra la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    transition: transform 0.3s ease; /* Efecto suave para hover */
+}
+
+/* Efecto hover en la imagen */
+.galeria-trek .card-trek img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+}
+
+/* Estilo para los títulos (h3) */
+.galeria-trek .card-trek h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    .galeria-trek {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+
+    .galeria-trek .card-trek img {
+        height: 250px; /* Reduce la altura de la imagen */
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria-trek {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .galeria-trek .card-trek img {
+        height: 200px; /* Reduce la altura de la imagen */
+    }
+}
+
+
+/* PERSONALIZADOS PAGES */
+
+/* Hero Section */
+.hero-perso {
+    height: calc(100vh - 50px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: url("../img/hibrido.mane.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-perso h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.hero-perso p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.btn-cta {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-cta:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+/* Galería con Video */
+.gallery-video {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+}
+.video-container {
+    flex: 1;
+    max-width: 45%; /* Reduce el tamaño máximo del video */
+    min-width: 300px; /* Evita que el video se vuelva muy pequeño en pantallas pequeñas */
+}
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 9 / 16; /* Proporción para videos verticales */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.video-text {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    max-width: 45%; /* Ajusta el ancho máximo para el texto */
+}
+.video-text h3 {
+    font-size: 24px; /* Ajuste de tamaño para mayor legibilidad */
+    color: #333;
+    margin-bottom: 10px;
+}
+.video-text p {
+    font-size: 16px; /* Ajuste de tamaño para mayor legibilidad */
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .gallery-content {
+        flex-direction: column; /* Cambia la disposición a columnas en pantallas pequeñas */
+        text-align: center;
+    }
+    .video-container {
+        max-width: 100%; /* El video ocupa todo el ancho */
+    }
+    .video-text {
+        max-width: 100%; /* El texto ocupa todo el ancho */
+        padding: 10px; /* Reduce el padding para dispositivos pequeños */
+    }
+    .video-text h3 {
+        font-size: 22px; /* Tamaño más pequeño para pantallas pequeñas */
+    }
+    .video-text p {
+        font-size: 14px; /* Tamaño más pequeño para pantallas pequeñas */
+    }
+}
+
+/* Historias de Clientes */
+.stories {
+    padding: 40px 20px;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+}
+.stories h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Diseño en Grid */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 30px; /* Espaciado entre elementos */
+    align-items: center;
+}
+.story {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado interno entre imagen y texto */
+    text-align: left; /* Alineación del texto */
+}
+.story img {
+    width: 100%; /* Toma todo el ancho disponible */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
+    margin-bottom: 15px; /* Añadir margen abajo para espacio */
+}
+.story img:hover {
+    transform: scale(1.05); /* Zoom al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4); /* Sombra más pronunciada */
+    z-index: 1; /* Asegura que la imagen no sobrepase el contenido */
+}
+.story-text blockquote {
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.story-text p {
+    font-size: 18px;
+    color: #ccc; /* Texto más claro */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .story-grid {
+        grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+    }
+    .story {
+        text-align: center; /* Centra el texto */
+    }
+}
+
+
+
+/* CONTACTO PAGES */
+/* Estilos generales */
+.body-contacto {
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/press.jpeg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */
+}
+
+h2, h3 {
+    color: #000000;
+}
+
+/* Contenedor principal de la página de contacto */
+.contact {
+    padding: 60px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para mejorar la legibilidad */
+    border-radius: 12px; /* Bordes redondeados en el contenedor */
+}
+
+/* Sección de información de la empresa */
+.contact-info {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.company-details {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.company-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-details li {
+    margin: 10px 0;
+}
+
+/* Estilo para el formulario */
+.contact-form {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: #f39c12;
+    outline: none;
+}
+
+/* Botones */
+button {
+    background-color: #f39c12;
+    color: #000;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+/* Estilo del mapa */
+.map-location {
+    margin-top: 40px;
+    text-align: center;
+}
+
+iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .company-details {
+        font-size: 16px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
